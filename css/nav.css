@@ -1,0 +1,38 @@
+footer{
+    background-color: rgba(0, 0, 0, 0.749);
+    bottom: 0;
+    padding: 20px;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.749);
+    
+    top: 0%;
+    
+    padding: 20px;
+    position: fixed;
+    width:98%;
+    z-index: 100;
+}
+header .logo{
+    width: fit-content;
+}
+nav .link{
+    margin-right: 30px;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+}
+header nav a{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-size: large;
+    transition: 0.5s;
+}
+header nav a:hover{
+    color: rgba(0, 255, 119, 0.871);
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-shadow: 0 15px 35px rgb(0, 255, 119);
+}
