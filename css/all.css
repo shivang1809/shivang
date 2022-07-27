@@ -58,15 +58,15 @@ body{
     animation: square 9s linear infinite;
 }.wrapper div:nth-child(7){
     top: 10%;
-    left: 80%;
+    left: 75%;
     animation: square 6s linear infinite;
 }.wrapper div:nth-child(8){
     top: 10%;
     left: 10%;
     animation: square 6s linear infinite;
 }.wrapper div:nth-child(9){
-    top: 10%;
-    left: 85%;
+    top: 25%;
+    left: 65%;
     animation: square 7s linear infinite;
 }
 @keyframes square{
