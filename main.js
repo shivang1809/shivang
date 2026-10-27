@@ -111,10 +111,22 @@
     })
     .filter(function (item) { return item.section; });
 
+  var rail = document.getElementById("rail");
+  var railCurrent = document.getElementById("rail-current");
+
   function setActiveSection(id) {
     navLinks.forEach(function (l) {
       l.classList.toggle("is-active", l.getAttribute("href") === "#" + id);
     });
+
+    if (rail) rail.classList.add("has-active");
+    if (railCurrent) {
+      var source = document.querySelector('.rail-link[href="#' + id + '"] .rail-label');
+      railCurrent.textContent = source ? source.textContent : "";
+      railCurrent.style.animation = "none";
+      void railCurrent.offsetWidth;
+      railCurrent.style.animation = "";
+    }
     railLinks.forEach(function (l) {
       var match = l.getAttribute("href") === "#" + id;
       if (match && !l.classList.contains("is-active")) {
@@ -148,6 +160,7 @@
         if (entries[0].isIntersecting) {
           navLinks.forEach(function (l) { l.classList.remove("is-active"); });
           railLinks.forEach(function (l) { l.classList.remove("is-active"); });
+          if (rail) rail.classList.remove("has-active");
         }
       }, { rootMargin: "-20% 0px -60% 0px" }).observe(heroEl);
     }
@@ -324,5 +337,19 @@
 
   updateToTop(window.scrollY || 0);
   updateParallax(window.scrollY || 0);
+
+
+  /* ---------- 12. Mobile "read more" on project cards ---------- */
+  var toggles = document.querySelectorAll(".project-toggle");
+
+  toggles.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var card = btn.closest(".project");
+      if (!card) return;
+      var open = card.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "Read less" : "Read more";
+    });
+  });
 
 })();
