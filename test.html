@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Operator Collective — Let's figure it out, together.</title>
+<meta name="description" content="An invite-only collective for undergraduates who want to explore, build and grow startups toward $1,000 MRR.">
+<script>
+(function(){
+  try {
+    const saved=localStorage.getItem('oc-theme');
+    const mode=saved==='light'||saved==='dark' ? saved : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    document.documentElement.setAttribute('data-theme',mode);
+  }catch(e){document.documentElement.setAttribute('data-theme','dark');}
+})();
+</script>
+<style>
+:root{--ink:#242424;--cream:#eeeee1;--muted:#a6a69e;--navy:#203b65;--blue:#bcd0ed;--red:#ee2c4d;--orange:#C8DF79;--rule:#55554f;--page:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--cream);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--red);color:white}
+.header{max-width:1550px;margin:auto;padding:25px clamp(22px,4vw,56px);display:flex;justify-content:space-between;align-items:center;font-size:14px;letter-spacing:-.03em}.brand{font-weight:600}.nav{display:flex;gap:32px;align-items:center}.nav a:not(.navcta){color:#b9b9af}.navcta{border:1px solid #d4d4c8;border-radius:50px;padding:12px 19px}.page{max-width:1500px;margin:auto;display:grid;grid-template-columns:clamp(70px,10vw,178px) minmax(0,1fr)}.rail{position:sticky;top:12vh;height:75vh;display:flex;flex-direction:column;align-items:flex-start;padding-left:clamp(20px,4vw,53px);padding-top:35px;gap:17px}.rail .dot{width:24px;height:24px;background:var(--cream);border-radius:50%;opacity:.22;transition:.2s}.rail .dot.active{opacity:1}.rail .railtext{writing-mode:vertical-rl;transform:rotate(180deg);margin-top:auto;font-size:12px;color:var(--muted)}main{padding:0 clamp(24px,6.5vw,110px) 0 clamp(4px,2vw,32px);min-width:0}.section{padding:clamp(78px,10vw,155px) 0;min-height:70vh;border-bottom:1px solid #41413d;position:relative}.section:first-child{padding-top:clamp(80px,10vw,145px)}.index{font-size:13px;letter-spacing:.04em;color:var(--muted);margin-bottom:32px}.display{font-size:clamp(64px,9.1vw,148px);line-height:.91;letter-spacing:-.087em;font-weight:400;margin:0;max-width:1050px}.display em{font-family:Georgia,Times,serif;font-weight:400;letter-spacing:-.07em}.lead{font-size:clamp(24px,3.5vw,48px);line-height:1.12;letter-spacing:-.055em;font-weight:400;max-width:920px;margin:45px 0 0}.sub{color:var(--muted);font-size:clamp(18px,2vw,25px);line-height:1.35;letter-spacing:-.035em;max-width:770px}.section-title{font-size:clamp(48px,7.3vw,108px);line-height:.99;letter-spacing:-.075em;font-weight:400;margin:0 0 42px;max-width:1100px}.section-title i{font-family:Georgia,serif;font-weight:400}.eyebrow{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.light-text{color:var(--cream)}.red-text{color:var(--red)}.orange-text{color:var(--orange)}.blue-text{color:var(--blue)}
+.hero{min-height:calc(100vh - 74px)}.hero-mark{margin-top:80px;display:grid;grid-template-columns:1fr 250px;align-items:end;gap:30px}.target{padding:24px 15px 20px 22px;background:var(--red);color:white;transform:rotate(3deg);border-radius:4px;box-shadow:12px 12px 0 var(--navy)}.target small{font-size:15px}.target b{display:block;font-size:clamp(50px,5.7vw,82px);font-weight:400;letter-spacing:-.08em;line-height:1.08;margin-top:17px}.tiny-action{font-size:13px;color:var(--muted);display:flex;align-items:center;gap:12px;margin-top:44px}.down{display:inline-flex;border:1px solid currentColor;border-radius:50%;width:36px;height:36px;align-items:center;justify-content:center}.intro-line{margin:40px 0 55px;font-size:clamp(23px,3.6vw,47px);line-height:1.2;letter-spacing:-.055em;max-width:900px}.intro-line span{color:var(--muted)}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:55px}.panel{min-height:350px;border-radius:27px;padding:25px 25px 15px;display:flex;flex-direction:column;position:relative;overflow:hidden}.panel h3{font-size:clamp(22px,2.2vw,33px);line-height:1.1;letter-spacing:-.04em;font-weight:400;margin:10px 0 0}.panel p{margin-top:auto;font-size:16px;line-height:1.35;position:relative;z-index:1}.panel.navy{background:var(--navy);color:white}.panel.blue{background:var(--blue);color:var(--navy)}.panel.red{background:var(--red);color:white}.illo{width:100%;height:160px;flex:1;min-height:130px;margin-top:13px}.table-like{margin-top:46px;border-top:1px solid #8b8b80}.track{display:grid;grid-template-columns:70px minmax(160px,.8fr) 1.5fr;gap:20px;align-items:start;padding:26px 0;border-bottom:1px solid #62625b}.track .num{color:var(--red);font-size:22px}.track strong{font-size:clamp(23px,3vw,41px);letter-spacing:-.055em;font-weight:400}.track span{font-size:clamp(17px,1.8vw,23px);letter-spacing:-.025em;line-height:1.35;color:var(--muted)}.mini-note{font-size:15px;line-height:1.45;max-width:590px;color:var(--muted)}
+.big-stat{background:var(--orange);color:#202020;border-radius:4px;padding:clamp(22px,5vw,65px);margin:45px 0 0;position:relative}.big-stat .stat{font-size:clamp(90px,15vw,230px);line-height:1;letter-spacing:-.095em;font-weight:400}.big-stat .stat-desc{font-size:clamp(20px,2.7vw,34px);letter-spacing:-.04em;margin-top:10px}.big-stat .smallprint{font-size:14px;margin-top:55px;opacity:.75}.timeline{margin:52px 0 0}.step{display:grid;grid-template-columns:110px 1fr;gap:25px;align-items:baseline;border-top:1px solid #606057;padding:22px 0}.step .n{font-family:Georgia,serif;font-style:italic;font-size:29px;color:var(--blue)}.step h3{margin:0;font-size:clamp(25px,3.6vw,48px);font-weight:400;letter-spacing:-.06em}.step p{font-size:clamp(16px,1.8vw,22px);color:var(--muted);margin:8px 0 0}.feature{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:50px}.feature .graphic{min-height:340px;background:var(--blue);border-radius:25px;display:grid;place-items:center;overflow:hidden}.feature .graphic svg{width:90%;max-width:490px}.feature .copy{font-size:clamp(25px,3.9vw,53px);line-height:1.16;letter-spacing:-.057em}.feature .copy span{color:var(--muted)}.week{margin:45px 0 0;background:var(--navy);padding:clamp(25px,5vw,55px);border-radius:28px;display:grid;grid-template-columns:1fr 1fr;gap:42px}.week h3{font-size:clamp(30px,4vw,54px);font-weight:400;line-height:1.04;letter-spacing:-.06em;margin:0}.week p{font-size:clamp(17px,2vw,25px);line-height:1.3;color:#c5d4e7;margin:0}.connection{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #606057;padding:26px 0;font-size:clamp(23px,3.6vw,45px);letter-spacing:-.06em;gap:24px}.connection small{font-size:16px;letter-spacing:0;color:var(--muted);text-align:right}.footer{padding-bottom:95px}.closing{font-size:clamp(60px,9vw,145px);letter-spacing:-.085em;line-height:.95;margin:0 0 42px;font-weight:400}.footer-cta{display:inline-flex;background:var(--red);padding:19px 28px;border-radius:60px;color:#fff;font-size:20px;align-items:center;gap:28px;transition:transform .15s}.footer-cta:hover{transform:translateY(-3px)}.footer-row{display:flex;justify-content:space-between;gap:20px;margin-top:110px;border-top:1px solid #626259;padding-top:24px;color:var(--muted);font-size:13px}.reveal{opacity:0;transform:translateY(23px);transition:opacity .6s ease,transform .6s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.page{grid-template-columns:55px 1fr}.rail{padding-left:18px}.rail .dot{width:15px;height:15px}.nav{gap:12px}.nav a:not(.navcta){display:none}main{padding-right:25px}.hero-mark{grid-template-columns:1fr}.target{max-width:340px;margin-left:auto}.three{grid-template-columns:1fr}.panel{min-height:230px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.panel h3{grid-column:1}.panel p{grid-column:1;grid-row:2}.illo{grid-column:2;grid-row:1/3;height:170px;align-self:center;margin:0}.feature,.week{grid-template-columns:1fr}.track{grid-template-columns:40px 1fr}.track span{grid-column:2}.step{grid-template-columns:50px 1fr}.feature .graphic{min-height:240px}}
+@media(max-width:510px){.header{padding:19px 17px}.page{display:block}.rail{display:none}main{padding:0 22px}.section{padding:75px 0;min-height:auto}.hero{min-height:85vh}.hero-mark{margin-top:55px}.target{max-width:230px}.three{gap:13px}.panel{border-radius:20px;padding:20px}.panel h3{font-size:23px}.panel p{font-size:14px}.illo{height:130px}.week{padding:24px;border-radius:17px}.connection{align-items:flex-start;flex-direction:column}.connection small{text-align:left}.footer-row{flex-wrap:wrap}.big-stat .smallprint{margin-top:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+
+/* Two purposeful color modes; illustration colors remain part of the identity. */
+:root { color-scheme:dark; }
+:root[data-theme="light"] {
+  color-scheme:light;
+  --ink:#F5F4ED;
+  --cream:#242424;
+  --muted:#66675F;
+  --rule:#C6C5B8;
+}
+:root[data-theme="light"] .nav a:not(.navcta){color:#55574F}
+:root[data-theme="light"] .navcta{border-color:#4B4B46}
+:root[data-theme="light"] .section{border-bottom-color:#D2D0C4}
+:root[data-theme="light"] .table-like{border-top-color:#B3B2A6}
+:root[data-theme="light"] .track,
+:root[data-theme="light"] .step,
+:root[data-theme="light"] .connection{border-bottom-color:#C0BFB3;border-top-color:#C0BFB3}
+:root[data-theme="light"] .track{border-top:0}
+:root[data-theme="light"] .step{border-bottom:0}
+:root[data-theme="light"] .connection{border-top:0}
+:root[data-theme="light"] .rail .dot{background:#33332F}
+:root[data-theme="light"] .panel.navy,
+:root[data-theme="light"] .panel.red{color:#fff}
+:root[data-theme="light"] .panel.blue{color:#203b65}
+:root[data-theme="light"] .week{color:#fff}
+:root[data-theme="light"] .week h3{color:#fff}
+:root[data-theme="light"] .target{color:#fff}
+:root[data-theme="light"] .big-stat{color:#202020}
+:root[data-theme="light"] .hero .blue-text{color:#345B8A}
+:root[data-theme="light"] .red-text{color:#CF2040}
+.theme-toggle{background:transparent;color:var(--cream);border:1px solid var(--rule);border-radius:50px;padding:10px 14px;cursor:pointer;display:inline-flex;align-items:center;gap:9px;font-size:13px;line-height:1;white-space:nowrap;transition:background .18s,border-color .18s}
+.theme-toggle:hover{background:color-mix(in srgb,var(--cream) 9%,transparent)}
+.theme-toggle:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+.theme-toggle svg{width:17px;height:17px;flex:none}
+.theme-toggle .sun{display:none}
+:root[data-theme="dark"] .theme-toggle .sun{display:block}
+:root[data-theme="light"] .theme-toggle .moon{display:block}
+:root[data-theme="light"] .theme-toggle .sun{display:none}
+.theme-toggle .moon{display:none}
+@media(max-width:850px){.nav{gap:12px}.theme-toggle{padding:10px}.theme-toggle .theme-label{display:none}}
+@media(max-width:510px){.theme-toggle{padding:9px}.nav{gap:10px}}
+
+/* An independent little creature hops toward the cursor and can catch it. */
+@media (hover:hover) and (pointer:fine) {
+ html.cursor-ready, html.cursor-ready body, html.cursor-ready a, html.cursor-ready button, html.cursor-ready input {cursor:none!important}
+ .cursor-dot{position:fixed;left:0;top:0;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:50%;background:var(--red);pointer-events:none;z-index:100001;opacity:0;will-change:transform;box-shadow:0 0 0 5px rgba(238,44,77,.12)}
+ .cursor-buddy{position:fixed;left:0;top:0;width:34px;height:34px;pointer-events:none;z-index:100000;opacity:1;will-change:transform;filter:drop-shadow(0 5px 0 rgba(0,0,0,.15))}
+ .buddy-face{position:absolute;inset:0;background:var(--lime,#c8df79);border:2px solid #242424;border-radius:9px;transform-origin:50% 100%;transition:background .2s}
+ .buddy-eye{position:absolute;top:10px;width:7px;height:9px;border-radius:50%;background:#242424;transform:translate(var(--look-x,0px),var(--look-y,0px));transition:transform .08s linear}
+ .buddy-eye.left{left:7px}.buddy-eye.right{right:7px}
+ .buddy-mouth{position:absolute;bottom:6px;left:14px;width:6px;height:3px;border-bottom:1.8px solid #242424;border-radius:0 0 50% 50%}
+ .buddy-cheek{position:absolute;bottom:10px;width:4px;height:3px;background:#ee2c4d;border-radius:50%;opacity:.65}
+ .buddy-cheek.left{left:4px}.buddy-cheek.right{right:4px}
+ html.cursor-visible:not(.cursor-eaten) .cursor-dot{opacity:1}
+ html.cursor-eaten .cursor-dot{opacity:0!important}
+ html.cursor-hover .buddy-face, html.cursor-near-buddy .buddy-face{background:var(--blue,#bcd0ed)}
+ html.cursor-near-buddy .cursor-dot{background:var(--blue,#bcd0ed);box-shadow:0 0 0 5px rgba(188,208,237,.22)}
+ .cursor-buddy.is-hopping .buddy-face{animation:buddy-hop .66s cubic-bezier(.2,.8,.2,1)}
+ @keyframes buddy-hop{0%{transform:scale(1.16,.8)}25%{transform:translateY(-25px) rotate(-8deg) scale(.94,1.1)}55%{transform:translateY(-35px) rotate(7deg)}85%{transform:translateY(0) scale(1.12,.8)}100%{transform:translateY(0) scale(1)}}
+}
+@media (prefers-reduced-motion:reduce){.cursor-dot,.cursor-buddy{display:none!important}}
+
+</style></head>
+<body>
+<header class="header"><a class="brand" href="#top">Operator Collective <span style="color:var(--red)">●</span></a><nav class="nav"><a href="#explore">Explore</a><a href="#build">Build</a><a href="#rhythm">The collective</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false" title="Toggle light and dark mode"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20.9 13.1A9 9 0 0 1 10.9 3.1 9 9 0 1 0 20.9 13.1Z"/></svg><span class="theme-label">Theme</span></button><a class="navcta" href="mailto:hello@example.com?subject=Operator%20Collective%20Invitation%20Request">Request an invite ↗</a></nav></header>
+<div class="page"><aside class="rail" aria-label="Section progress"><a class="dot active" href="#top" aria-label="Introduction"></a><a class="dot" href="#explore" aria-label="Explore"></a><a class="dot" href="#build" aria-label="Build"></a><a class="dot" href="#milestone" aria-label="Milestone"></a><a class="dot" href="#rhythm" aria-label="How it works"></a><a class="dot" href="#people" aria-label="Network"></a><a class="dot" href="#join" aria-label="Join"></a><span class="railtext">Undergrads building the real thing · 2026</span></aside>
+<main>
+<section class="section hero" id="top"><div class="index">A LETTER TO THE NEXT GENERATION OF BUILDERS / 001</div><h1 class="display">Have no clue<br>where to <em>start?</em></h1><p class="lead">Good. <span class="blue-text">Neither did most founders.</span></p><div class="hero-mark"><div><p class="sub">You don't need the perfect idea, a technical title, or a five-year plan. Just curiosity—and people willing to figure it out with you.</p><a class="tiny-action" href="#explore"><span class="down">↓</span> Read on</a></div><div class="target"><small>THE NORTH STAR / PER STARTUP</small><b>$1,000<br>MRR.</b><small>A common goal. For every startup.</small></div></div></section>
+<section class="section" id="explore"><div class="index">002 / THE BEGINNING</div><h2 class="section-title">Let's figure it out, <i>together.</i></h2><p class="intro-line">Maybe you love startups. <span>Maybe none of the usual roles sound like you. Maybe you just want to discover a problem worth solving.</span></p><div class="three reveal"><article class="panel navy"><h3>Find your people.</h3><svg class="illo" viewBox="0 0 300 175" aria-hidden="true"><circle cx="95" cy="80" r="34" fill="#bdcfeb"/><circle cx="210" cy="80" r="34" fill="#ee2c4d"/><circle cx="154" cy="105" r="34" fill="#f0eee1"/><path d="M45 153Q65 113 110 127M185 127Q231 114 253 153" fill="none" stroke="#eeeede" stroke-width="5" stroke-linecap="round"/></svg><p>Explore alongside other curious undergrads.</p></article><article class="panel blue"><h3>Get into the details.</h3><svg class="illo" viewBox="0 0 300 175" aria-hidden="true"><path d="M35 145H267" stroke="#203b65" stroke-width="3"/><rect x="53" y="96" width="39" height="49" fill="#ee2c4d"/><rect x="111" y="62" width="39" height="83" fill="#203b65"/><rect x="169" y="34" width="39" height="111" fill="#C8DF79"/><path d="M42 82 Q110 92 147 43 T252 28" stroke="#203b65" fill="none" stroke-width="3" stroke-dasharray="6 7"/></svg><p>Understand industries, data, sales and product—not just buzzwords.</p></article><article class="panel red"><h3>Try something real.</h3><svg class="illo" viewBox="0 0 300 175" aria-hidden="true"><path d="M72 131L157 37L205 105L255 52" fill="none" stroke="#f1eee0" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/><path d="M220 51H258V89" fill="none" stroke="#f1eee0" stroke-width="7"/><circle cx="72" cy="131" r="14" fill="#203b65"/><circle cx="157" cy="37" r="13" fill="#bcd0ed"/></svg><p>Turn what you learn into an experiment worth running.</p></article></div></section>
+<section class="section" id="build"><div class="index">003 / WHICHEVER STAGE YOU'RE AT</div><h2 class="section-title">There isn't one way to <i>begin.</i></h2><div class="table-like reveal"><div class="track"><div class="num">01</div><strong>Just curious?</strong><span>Learn a craft. Dive into industry research, data and real business problems. Find others exploring with you.</span></div><div class="track"><div class="num">02</div><strong>Have an idea?</strong><span>Test the assumption. Talk to users. Make a small version and see what happens.</span></div><div class="track"><div class="num">03</div><strong>Already building?</strong><span>Find collaborators. Improve distribution, pricing and retention. Work through real blockers.</span></div></div><p class="mini-note" style="margin-top:32px">Solo founders or teams. You keep ownership of your startup.</p></section>
+<section class="section" id="milestone"><div class="index">004 / THE DIRECTION, NOT A DEADLINE</div><h2 class="section-title">Try. Build. Rethink. <i>Repeat.</i></h2><p class="sub">A startup isn't a straight line. You learn, change your mind, and keep moving.</p><div class="timeline reveal"><div class="step"><span class="n">01</span><div><h3>Explore the problem.</h3><p>Find a real frustration and understand who has it.</p></div></div><div class="step"><span class="n">02</span><div><h3>Ship a first version.</h3><p>Get something useful into someone's hands.</p></div></div><div class="step"><span class="n">03</span><div><h3>Test what happens.</h3><p>Watch behavior. Ask questions. Learn from evidence.</p></div></div><div class="step"><span class="n">04</span><div><h3>Pivot when needed.</h3><p>Change the product, customer, or approach.</p></div></div><div class="step"><span class="n">05</span><div><h3>Find repeatable revenue.</h3><p>Win paying customers and earn their return.</p></div></div></div><div class="big-stat reveal"><div class="eyebrow" style="color:#292929">THE SHARED MILESTONE</div><div class="stat">$1,000</div><div class="stat-desc">monthly recurring revenue, for <em>each</em> member startup.</div><div class="smallprint">The money belongs to the startups—not the collective.</div></div></section>
+<section class="section" id="rhythm"><div class="index">005 / OUR WAY OF WORKING</div><h2 class="section-title">More doing.<br><i>Less pretending.</i></h2><div class="feature reveal"><div class="graphic"><svg viewBox="0 0 430 330" aria-hidden="true"><rect x="69" y="47" width="285" height="229" rx="10" fill="#203b65"/><rect x="89" y="75" width="245" height="38" rx="3" fill="#f0eee1"/><rect x="89" y="130" width="91" height="101" fill="#C8DF79"/><path d="M202 216 L235 181 L267 192 L319 148" stroke="#f0eee1" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="310" cy="253" r="27" fill="#ee2c4d"/><path d="M293 253 L306 267 L329 237" fill="none" stroke="white" stroke-width="6" stroke-linecap="round"/></svg></div><div class="copy">Every week, <span>bring what changed.</span> Something you built, tested, learned, fixed—or decided to stop.</div></div><div class="week reveal"><h3>A small, invite-only group. A lot of shared momentum.</h3><p>Learn from each other's work. Dive into real numbers and systems. Help unblock a founder. Then go do the next thing.</p></div></section>
+<section class="section" id="people"><div class="index">006 / THE PEOPLE AROUND YOU</div><h2 class="section-title">You don't have to do it <i>alone.</i></h2><p class="sub">Support that helps you make progress, not just add names to a contact list.</p><div class="connection"><span>Fellow builders</span><small>Feedback, teammates, accountability</small></div><div class="connection"><span>Experienced operators</span><small>Practical insight and introductions</small></div><div class="connection"><span>VC network</span><small>Relevant connections when you're ready</small></div><p class="mini-note" style="margin-top:30px">We don't take equity or provide funding. Investor introductions may be possible, but are not guaranteed.</p></section>
+<section class="section footer" id="join"><div class="index">007 / AN OPEN INVITATION TO THE CURIOUS</div><h2 class="closing">Let's make<br><i style="font-family:Georgia,serif">something</i><br><span class="red-text">real.</span></h2><p class="sub">Undergrad? Curious or already building? Willing to learn deeply, do the work, and help other people move forward? We should talk.</p><a class="footer-cta" href="mailto:hello@example.com?subject=Operator%20Collective%20Invitation%20Request">Request an invitation <span>↗</span></a><p class="mini-note">Invitation requests currently open an email draft. Replace the placeholder address with your actual contact before publishing.</p><div class="footer-row"><span>Operator Collective © 2026</span><span>Build capabilities. Build startups. Build together.</span><a href="#top">Back to top ↑</a></div></section>
+</main></div>
+<script>
+const themeButton=document.getElementById('theme-toggle');
+function updateThemeButton(){
+  const light=document.documentElement.getAttribute('data-theme')==='light';
+  themeButton.setAttribute('aria-label',light?'Switch to dark mode':'Switch to light mode');
+  themeButton.setAttribute('aria-pressed',String(light));
+  themeButton.title=light?'Switch to dark mode':'Switch to light mode';
+}
+updateThemeButton();
+themeButton.addEventListener('click',()=>{
+  const next=document.documentElement.getAttribute('data-theme')==='light'?'dark':'light';
+  document.documentElement.setAttribute('data-theme',next);
+  try{localStorage.setItem('oc-theme',next)}catch(e){}
+  updateThemeButton();
+});
+const sections=[...document.querySelectorAll('main .section')],dots=[...document.querySelectorAll('.rail .dot')];
+if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const i=sections.indexOf(e.target);dots.forEach((d,n)=>d.classList.toggle('active',n===i));}})},{rootMargin:'-25% 0px -60% 0px'});sections.forEach(s=>observer.observe(s));const rev=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');rev.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>rev.observe(e));}else document.querySelectorAll('.reveal').forEach(e=>e.classList.add('show'));
+
+// The buddy has its own position. It hops toward the mouse and can eat the dot.
+(() => {
+ const fine=matchMedia('(hover:hover) and (pointer:fine)');
+ const reduced=matchMedia('(prefers-reduced-motion:reduce)');
+ if(!fine.matches || reduced.matches)return;
+ const root=document.documentElement;
+ const dot=document.createElement('div');dot.className='cursor-dot';
+ const buddy=document.createElement('div');buddy.className='cursor-buddy';
+ buddy.innerHTML='<div class="buddy-face"><span class="buddy-eye left"></span><span class="buddy-eye right"></span><span class="buddy-cheek left"></span><span class="buddy-cheek right"></span><span class="buddy-mouth"></div>';
+ dot.setAttribute('aria-hidden','true');buddy.setAttribute('aria-hidden','true');
+ document.body.append(dot,buddy);
+ let x=innerWidth/2,y=innerHeight/2;
+ let bx=Math.min(90,innerWidth-50),by=innerHeight-95;
+ let seen=false,eaten=false,eatenX=0,eatenY=0,lastHop=0,hopUntil=0;
+ const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,v));
+ const place=()=>{buddy.style.transform=`translate3d(${bx}px,${by}px,0)`};
+ place();
+ window.addEventListener('resize',()=>{bx=clamp(bx,8,innerWidth-44);by=clamp(by,8,innerHeight-44);place()},{passive:true});
+ window.addEventListener('pointermove',e=>{
+   if(e.pointerType && e.pointerType!=='mouse' && e.pointerType!=='pen')return;
+   x=e.clientX;y=e.clientY;seen=true;
+   dot.style.transform=`translate3d(${x}px,${y}px,0)`;
+   root.classList.add('cursor-ready','cursor-visible');
+   root.classList.toggle('cursor-hover',Boolean(e.target.closest('a,button,[role="button"],input,textarea,select')));
+   // After being eaten, the dot stays gone until the pointer escapes the catch spot.
+   if(eaten && Math.hypot(x-eatenX,y-eatenY)>65){eaten=false;root.classList.remove('cursor-eaten')}
+ },{passive:true});
+ document.addEventListener('pointerout',e=>{if(!e.relatedTarget)root.classList.remove('cursor-visible')});
+ document.addEventListener('pointerover',()=>{if(seen)root.classList.add('cursor-visible')});
+ window.addEventListener('blur',()=>root.classList.remove('cursor-visible'));
+ function animate(now){
+   if(seen){
+     const dx=x-(bx+17),dy=y-(by+17),dist=Math.hypot(dx,dy);
+     root.classList.toggle('cursor-near-buddy', dist<55);
+     buddy.style.setProperty('--look-x',clamp(dx/55,-3,3)+'px');
+     buddy.style.setProperty('--look-y',clamp(dy/55,-2.5,2.5)+'px');
+     if(!eaten && dist<25){
+       eaten=true;eatenX=x;eatenY=y;root.classList.add('cursor-eaten');
+       buddy.classList.remove('is-hopping');void buddy.offsetWidth;buddy.classList.add('is-hopping');
+       hopUntil=now+680;
+     }
+     // A deliberate series of hops, not a continuously attached follower.
+     if(now-lastHop>950 && now>hopUntil && dist>25){
+       lastHop=now;hopUntil=now+650;
+       const stride=clamp(dist*.28,28,115);
+       bx=clamp(bx+dx/dist*stride,8,innerWidth-44);
+       by=clamp(by+dy/dist*stride,8,innerHeight-44);
+       buddy.style.transition='transform .52s cubic-bezier(.2,.8,.2,1)';
+       buddy.classList.remove('is-hopping');void buddy.offsetWidth;buddy.classList.add('is-hopping');
+       place();
+     }
+     if(now>hopUntil)buddy.classList.remove('is-hopping');
+   }
+   requestAnimationFrame(animate);
+ }
+ requestAnimationFrame(animate);
+})();
+</script>
+</body></html>

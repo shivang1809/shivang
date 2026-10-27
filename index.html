@@ -1,196 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shivang Yadav</title>
-  <script src="js/typed.js"></script>
-  <link rel="shortcut icon" type="image/png" href="img/fav.png"/>
-  <link rel="stylesheet" href="css/loader.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/all.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://kit.fontawesome.com/0df6ffb9ff.js" crossorigin="anonymous"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shivang Yadav — Developer</title>
+<meta name="description" content="Shivang Yadav is a developer working in Python and JavaScript — desktop tooling, small web apps, and the occasional cryptography experiment." />
+<meta name="author" content="Shivang Yadav" />
+<meta name="theme-color" content="#07080a" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shivang Yadav — Developer" />
+<meta property="og:description" content="Python and JavaScript. Desktop tooling, small web apps, and the occasional cryptography experiment." />
+<meta property="og:url" content="https://shivangyadav.vercel.app" />
+<meta property="og:image" content="https://shivangyadav.vercel.app/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<noscript>
+  <style>
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .rail { display: none !important; }
+  </style>
+</noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Shivang Yadav",
+  "url": "https://shivangyadav.vercel.app",
+  "email": "mailto:shivangyadav36557@gmail.com",
+  "jobTitle": "Developer",
+  "knowsAbout": ["Python", "JavaScript", "C", "PHP", "PyQt6", "Android Studio", "Godot", "Web Development"],
+  "sameAs": ["https://github.com/shivang1809"]
+}
+</script>
 </head>
-<body onload="loadingFunction()">
-  <div class="loader" id="loader">
-  <div class="center">
-    <div class="ring"></div>
-    <span id="l-text">loading...</span>
-  </div>
-</div>
-  <header>
-    <nav>
-      <div class="link">
-        <a href="/">Home</a>
-        <a href="/p/projects.html">Projects</a>
-        <a href="/p/about.html">About</a>
-      </div>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Shivang Yadav, home">
+      <span class="brand-mark" aria-hidden="true">SY</span>
+      <span class="brand-text">shivang<span class="brand-dot">.</span>yadav</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#about"><span class="nav-num">01</span> About</a>
+      <a href="#work"><span class="nav-num">02</span> Work</a>
+      <a href="#ventures"><span class="nav-num">03</span> Ventures</a>
+      <a href="#toolbox"><span class="nav-num">04</span> Toolbox</a>
+      <a href="#contact"><span class="nav-num">05</span> Contact</a>
     </nav>
-  </header>
-  <div class="hero">
-    <h1 class="name">Shivang Yadav</h1>
-    <h2 class="type"><i>I am a <span class="typing"></span>.</i></h2>
-    <p>A high school student aspiring to become a <span class="highlight">Software Engineer</span>.</p>
-  </div>
-  <div class="wrapper">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="main">
-    <div class="skill">
-      <h1>SKILLS</h1>
-      <div class="u">
-      <div class="underline"></div>
-      </div>
-      <div class="skills">
 
-        <div class="container">
-          <div class="card">
-            <div class="box">
-              <div class="percent">
-                <svg>
-                  <circle cx="70" cy="70" r="70"></circle>
-                  <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="num">
-                  <h2>95<span>%</span></h2>
-                </div>
-              </div>
-              <h2 class="text">Html</h2>
-            </div>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<aside class="rail" id="rail" aria-label="Section navigation">
+  <span class="rail-track" aria-hidden="true"><span class="rail-fill" id="rail-fill"></span></span>
+  <ul class="rail-list">
+    <li><a class="rail-link" href="#about"><span class="rail-label">About</span><span class="rail-dot"></span></a></li>
+    <li><a class="rail-link" href="#work"><span class="rail-label">Work</span><span class="rail-dot"></span></a></li>
+    <li><a class="rail-link" href="#ventures"><span class="rail-label">Ventures</span><span class="rail-dot"></span></a></li>
+    <li><a class="rail-link" href="#toolbox"><span class="rail-label">Toolbox</span><span class="rail-dot"></span></a></li>
+    <li><a class="rail-link" href="#contact"><span class="rail-label">Contact</span><span class="rail-dot"></span></a></li>
+  </ul>
+</aside>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+
+      <div class="hero-left">
+        <p class="eyebrow reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to internships &amp; freelance work
+        </p>
+
+        <h1 class="hero-title reveal">
+          Shivang<br />
+          <span class="hero-title-2">Yadav</span>
+        </h1>
+
+        <p class="hero-lede reveal">
+          I build software that runs where the problem is — a desktop browser in Python,
+          a direct-download tool for Drive links, a chatbot that answers without a language model.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#work">See the work</a>
+          <a class="btn btn-ghost" href="https://github.com/shivang1809" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="terminal reveal" aria-hidden="true">
+          <div class="terminal-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+            <span class="terminal-title">~/shivang — zsh</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> whoami</p>
+            <p class="out">developer · python · javascript</p>
+            <p><span class="prompt">$</span> cat focus.txt</p>
+            <p class="out">building <span id="typed" class="typed"></span><span class="caret" aria-hidden="true"></span></p>
+            <p><span class="prompt">$</span> ls ~/live</p>
+            <p class="out">ssbbaba/</p>
           </div>
         </div>
-        <div class="container">
-          <div class="card">
-            <div class="box">
-              <div class="percent">
-                <svg>
-                  <circle cx="70" cy="70" r="70"></circle>
-                  <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="num">
-                  <h2>80<span>%</span></h2>
-                </div>
-              </div>
-              <h2 class="text">Python</h2>
-            </div>
-          </div>
+
+        <a class="hero-ship reveal" href="https://ssbbaba.vercel.app" target="_blank" rel="noopener">
+          <span class="ship-dot" aria-hidden="true"></span>
+          <span class="ship-text">Now live — <strong>SSBbaba</strong>, free SSB TAT &amp; WAT practice</span>
+          <span class="ship-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <dl class="hero-stats reveal">
+        <div><dt>Since</dt><dd>2021</dd></div>
+        <div><dt>Public repos</dt><dd>18</dd></div>
+        <div><dt>Main stack</dt><dd>Python</dd></div>
+      </dl>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2>About</h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="lead">
+            I started writing code in 2021, in a browser tab and a text editor, because I wanted
+            a website that did something. The website turned into a habit.
+          </p>
+          <p>
+            Most of what I build starts as a small annoyance I want to be rid of. A Drive link that
+            won't download directly becomes Downract. A browser with no ad blocker worth the name
+            becomes SBrows. A chatbot that answers every question with confident nonsense becomes
+            TarkikX, which only tells you what it actually found.
+          </p>
+          <p>
+            These days my time goes into desktop tooling in Python and small, fast web apps. I care
+            about things that ship and keep working: one file that does its job beats a framework
+            that needs a build step to say hello.
+          </p>
+          <p>
+            I'm self-taught, I read source code for fun, and I'd rather show you eighteen
+            repositories than describe my skills as a percentage.
+          </p>
         </div>
-        <div class="container">
-          <div class="card">
-            <div class="box">
-              <div class="percent">
-                <svg>
-                  <circle cx="70" cy="70" r="70"></circle>
-                  <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="num">
-                  <h2>30<span>%</span></h2>
-                </div>
-              </div>
-              <h2 class="text">PHP</h2>
-            </div>
+
+        <aside class="about-card reveal">
+          <p class="card-label">Right now</p>
+          <ul class="now-list">
+            <li><span class="now-key">Building</span><span>Desktop tools &amp; a first game</span></li>
+            <li><span class="now-key">Learning</span><span>3D game dev in Godot</span></li>
+            <li><span class="now-key">Open to</span><span>Internships, freelance, collabs</span></li>
+            <li><span class="now-key">Based in</span><span>India</span></li>
+          </ul>
+          <a class="card-link" href="https://github.com/shivang1809" target="_blank" rel="noopener">
+            github.com/shivang1809 ↗
+          </a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-num">02</span>
+        <h2>Selected work</h2>
+        <p class="section-note">Four projects that show how I think.</p>
+      </header>
+
+      <div class="work-grid">
+
+        <article class="project reveal" data-accent="mint">
+          <div class="project-top">
+            <span class="project-year">2026</span>
+            <a class="project-link" href="https://github.com/shivang1809/SBrows" target="_blank" rel="noopener" aria-label="SBrows on GitHub">↗</a>
           </div>
+          <h3>SBrows</h3>
+          <p class="project-sub">A browser, from scratch</p>
+          <p class="project-body">
+            A working desktop browser in a single ~1,100-line Python file: movable tabs with favicons,
+            private tabs on an off-the-record profile, a built-in ad blocker, bookmarks, downloads,
+            find-in-page, PDF export and session restore — with no external icon assets.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>PyQt6</li><li>QtWebEngine</li>
+          </ul>
+        </article>
+
+        <article class="project reveal" data-accent="cyan">
+          <div class="project-top">
+            <span class="project-year">2026</span>
+            <a class="project-link" href="https://github.com/shivang1809/PSSC" target="_blank" rel="noopener" aria-label="PSSC on GitHub">↗</a>
+          </div>
+          <h3>PSSC</h3>
+          <p class="project-sub">A cipher I designed myself</p>
+          <p class="project-body">
+            A symmetric stream cipher in pure Python, no crypto libraries. Version 2 is a pseudo
+            one-time pad: each character is shifted by an independent random key digit across an
+            82-character alphabet, which kills the frequency analysis that breaks static
+            substitution ciphers. Includes serialisation and payload obfuscation.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>Cryptography</li><li>Algorithms</li>
+          </ul>
+        </article>
+
+        <article class="project reveal" data-accent="violet">
+          <div class="project-top">
+            <span class="project-year">2026</span>
+            <a class="project-link" href="https://github.com/shivang1809/TarkikX" target="_blank" rel="noopener" aria-label="TarkikX on GitHub">↗</a>
+          </div>
+          <h3>TarkikX</h3>
+          <p class="project-sub">Answers without a language model</p>
+          <p class="project-body">
+            A chatbot that retrieves and summarises from DuckDuckGo and Wikipedia instead of
+            generating text, so every answer traces back to a page that exists. Session history,
+            dark and light UI, and no third-party AI behind it.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>JavaScript</li><li>Retrieval</li>
+          </ul>
+        </article>
+
+        <article class="project reveal" data-accent="amber">
+          <div class="project-top">
+            <span class="project-year">2022</span>
+            <a class="project-link" href="https://github.com/shivang1809/Downract" target="_blank" rel="noopener" aria-label="Downract on GitHub">↗</a>
+          </div>
+          <h3>Downract</h3>
+          <p class="project-sub">Google Drive links, made direct</p>
+          <p class="project-body">
+            Turns a Drive share link into a direct download link. MIT licensed and built with
+            Arghya Sarkar — the first thing I made that other people actually used, and the project
+            that taught me how much of engineering is maintenance.
+          </p>
+          <ul class="tags">
+            <li>Python</li><li>JavaScript</li><li>MIT</li>
+          </ul>
+        </article>
+
+      </div>
+
+
+      <p class="more reveal">
+        Also on GitHub:
+        <a href="https://github.com/shivang1809?tab=repositories" target="_blank" rel="noopener">reelScroll, trackmail, SU, PyExe-GUI, TTS-GUI, androidQuiz ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ VENTURES ============ -->
+  <section class="section" id="ventures">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2>Things I put my name on</h2>
+        <p class="section-note">Products I built and ran, not just code in a repo.</p>
+      </header>
+
+      <div class="venture-list">
+        <article class="venture reveal" data-accent="cyan">
+          <h3><a href="https://ssbbaba.vercel.app" target="_blank" rel="noopener">SSBbaba <span class="venture-arrow">↗</span></a></h3>
+          <p>A free practice platform for the SSB psychology tests — 100+ TAT pictures at the real 30-seconds-a-slide timing, and 240+ WAT words at 15 seconds each. No login, no paywall, built for defence aspirants prepping NDA, CDS and AFCAT.</p>
+          <span class="venture-meta">Live product · Free</span>
+        </article>
+        <article class="venture reveal" data-accent="mint">
+          <h3><a href="https://smartestblogs.blogspot.com" target="_blank" rel="noopener">SmartestBlogs <span class="venture-arrow">↗</span></a></h3>
+          <p>A blog covering technology, coding and gaming — my first attempt at writing for an audience rather than a compiler.</p>
+          <span class="venture-meta">Editorial · 2021</span>
+        </article>
+        <article class="venture reveal" data-accent="violet">
+          <h3>Codalk</h3>
+          <p>A community where people post a query and get an answer from someone who has hit the same wall.</p>
+          <span class="venture-meta">Community · 2021</span>
+        </article>
+        <article class="venture reveal" data-accent="amber">
+          <h3><a href="https://downract.vercel.app" target="_blank" rel="noopener">Downract <span class="venture-arrow">↗</span></a></h3>
+          <p>A download utility that outlived the version of me who wrote it. Still the project I point to when someone asks what I've shipped.</p>
+          <span class="venture-meta">Product · 2022</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TOOLBOX ============ -->
+  <section class="section" id="toolbox">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-num">04</span>
+        <h2>Toolbox</h2>
+        <p class="section-note">What I reach for, and how well I know it.</p>
+      </header>
+
+      <div class="tool-grid">
+        <div class="tool-col reveal" data-accent="mint">
+          <h3 class="tool-head">Languages</h3>
+          <ul class="chips">
+            <li class="chip chip-strong">Python</li>
+            <li class="chip chip-strong">JavaScript</li>
+            <li class="chip chip-strong">C</li>
+            <li class="chip chip-strong">PHP</li>
+            <li class="chip chip-strong">HTML &amp; CSS</li>
+            <li class="chip">GDScript</li>
+            <li class="chip">SQL</li>
+          </ul>
+          <p class="tool-note">Filled chips are the ones I work in day to day.</p>
         </div>
-        <div class="container">
-          <div class="card">
-            <div class="box">
-              <div class="percent">
-                <svg>
-                  <circle cx="70" cy="70" r="70"></circle>
-                  <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="num">
-                  <h2>80<span>%</span></h2>
-                </div>
-              </div>
-              <h2 class="text">CSS</h2>
-            </div>
-          </div>
+
+        <div class="tool-col reveal" data-accent="cyan">
+          <h3 class="tool-head">Frameworks &amp; libraries</h3>
+          <ul class="chips">
+            <li class="chip chip-strong">PyQt6 / QtWebEngine</li>
+            <li class="chip">Flask</li>
+            <li class="chip">Node.js</li>
+            <li class="chip">Godot</li>
+            <li class="chip">Requests &amp; BeautifulSoup</li>
+            <li class="chip">pandas</li>
+          </ul>
         </div>
-        <div class="container">
-          <div class="card">
-            <div class="box">
-              <div class="percent">
-                <svg>
-                  <circle cx="70" cy="70" r="70"></circle>
-                  <circle cx="70" cy="70" r="70"></circle>
-                </svg>
-                <div class="num">
-                  <h2>50<span>%</span></h2>
-                </div>
-              </div>
-              <h2 class="text">JS</h2>
-            </div>
-          </div>
+
+        <div class="tool-col reveal" data-accent="violet">
+          <h3 class="tool-head">Tools &amp; platforms</h3>
+          <ul class="chips">
+            <li class="chip chip-strong">Git</li>
+            <li class="chip chip-strong">GitHub</li>
+            <li class="chip chip-strong">Android Studio</li>
+            <li class="chip chip-strong">VS Code</li>
+            <li class="chip">Vercel</li>
+            <li class="chip">Linux</li>
+            <li class="chip">Figma</li>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="websites">
-      <h1>WEBSITES I OWN</h1>
-      <div class="u">
-      <div class="underline"></div>
-      </div>
-      <div class="sites">
-        <div class="w-card">
-          <div class="w-card-image">
-            <img src="img/smartestblogs.png" alt="" srcset="" width="320px">
-          </div>
-          <h2>Smartest Blogs</h2>
-          <p>SmartestBlogs is a Blog websites specially featuring technology, coding and gaming.</p>
-          <a href="https://smartestblogs.blogspot.com/" target="_blank"><button class="visit">Visit</button></a>
-        </div>
-        <div class="w-card">
-          <div class="w-card-image">
-            <img src="img/downract.png" alt="" srcset="" width="320px">
-          </div>
-          <h2>Downract</h2>
-          <p>A powerful tool to Generate direct download links for Google Drive files.</p>
-          <a href="https://downract.vercel.app/" target="_blank"><button class="visit">Visit</button></a>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-contact" id="contact">
+    <div class="wrap">
+      <header class="section-head reveal">
+        <span class="section-num">05</span>
+        <h2>Contact</h2>
+      </header>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="contact-lede">
+            If you're building something and want a second pair of hands — or you're hiring for an
+            internship — my inbox is open.
+          </p>
+          <a class="contact-mail" href="mailto:shivangyadav36557@gmail.com">shivangyadav36557@gmail.com</a>
+          <button class="copy-btn" id="copy-email" data-email="shivangyadav36557@gmail.com" type="button">
+            Copy email
+          </button>
         </div>
 
-        <div class="w-card">
-          <div class="w-card-image">
-            <img src="img/codalk.png" alt="" srcset="" width="320px">
-          </div>
-          <h2>Codalk</h2>
-          <p>Codalk is a community to solve and answer your query and questions.</p>
-          <a href="https://codalk.000webhostapp.com/" target="_blank"><button class="visit">Visit</button></a>
-        </div>
+        <ul class="contact-links reveal">
+          <li><a href="https://github.com/shivang1809" target="_blank" rel="noopener"><span>GitHub</span><span class="arrow">↗</span></a></li>
+          <li><a href="mailto:shivangyadav36557@gmail.com"><span>Email</span><span class="arrow">↗</span></a></li>
+          <li><a href="https://shivangyadav.vercel.app" target="_blank" rel="noopener"><span>This site</span><span class="arrow">↗</span></a></li>
+        </ul>
       </div>
     </div>
+  </section>
 
-    <div class="connect">
-      <h1>CONNECT WITH ME</h1>
-      <div class="u">
-      <div class="underline"></div>
-      </div>
-      <div class="social">
-        <a href="https://discord.gg/gcaKENpN" target="_blank"><button><i class="fa-brands fa-discord"></i></button></a>
-        <a href="mailto:shivangyadav36557@gmail.com" target="_blank"><button id="fix"><i class="fa-solid fa-envelope"></i></button></a>
-        <a href="https://github.com/shivang1809" target="_blank"><button id="fix"><i class="fa-brands fa-github"></i></button></a>
-        <a href="https://www.youtube.com/channel/UCs1CQ__4AylPLQMngThN0Yg" target="_blank"><button><i class="fa-brands fa-youtube"></i></button></a>
-      </div>
-    </div>
+</main>
 
-    <footer>
-      <p>© 2022 Shivang Yadav — All Rights Reserved</p>
-    </footer>
+<button class="to-top" id="to-top" type="button" aria-label="Back to top">
+  <svg class="tt-svg" viewBox="0 0 44 44" aria-hidden="true">
+    <circle class="tt-track" cx="22" cy="22" r="19"></circle>
+    <circle class="tt-ring" id="tt-ring" cx="22" cy="22" r="19"></circle>
+  </svg>
+  <span class="tt-arrow" aria-hidden="true">↑</span>
+</button>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="mono">© <span id="year">2026</span> Shivang Yadav</p>
+    <p class="mono footer-note">Hand-written HTML, CSS and JavaScript. No framework.</p>
   </div>
+</footer>
 
-
+<script src="main.js" defer></script>
 </body>
-<script src="js/type.js"></script>
-<script src="js/loader.js"></script>
-
 </html>
