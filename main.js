@@ -352,4 +352,23 @@
     });
   });
 
+
+  /* ---------- 13. Live IST clock in the terminal status line ---------- */
+  var clockEl = document.getElementById("clock");
+
+  if (clockEl) {
+    var tickClock = function () {
+      var now = new Date();
+      var time = now.toLocaleTimeString("en-GB", {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      });
+      clockEl.textContent = "IST " + time;
+    };
+    tickClock();
+    setInterval(tickClock, 20000);
+  }
+
 })();

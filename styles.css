@@ -1870,3 +1870,52 @@ svg.chip-icon[fill="none"] { stroke: currentColor; }
 @media (max-width: 760px) {
   .hero-right { display: none; }
 }
+
+/* ---------- terminal status line (tmux-style) ---------- */
+.terminal-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 1.1rem;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--c-mint) 6%, transparent);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: var(--text-mute);
+}
+.ts-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-dim);
+}
+.ts-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-mint);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--c-mint) 70%, transparent);
+  animation: shipPulse 3s var(--ease) infinite;
+}
+.ts-right { color: var(--text-mute); font-variant-numeric: tabular-nums; }
+
+/* ---------- phone: a compact terminal instead of nothing ---------- */
+@media (max-width: 760px) {
+  .hero-right { display: grid; }
+  .terminal { display: block; }
+  .hero-right .terminal { border-radius: 12px; }
+  .terminal-bar { padding: 0.48rem 0.75rem; }
+  .terminal-title { font-size: 0.62rem; }
+  .terminal-body {
+    padding: 0.7rem 0.85rem 0.85rem;
+    font-size: 0.76rem;
+    line-height: 1.75;
+  }
+  /* the file listing is the first thing to go when space is tight */
+  .terminal-body p:nth-child(5),
+  .terminal-body p:nth-child(6) { display: none; }
+  .terminal-status { padding: 0.42rem 0.85rem; font-size: 0.62rem; }
+  .hero-right { gap: 0; margin-top: 0.2rem; }
+}
