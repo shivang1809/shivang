@@ -1865,3 +1865,8 @@ svg.chip-icon[fill="none"] { stroke: currentColor; }
 @media (max-width: 1359px) {
   .to-top { display: none; }
 }
+
+/* the hero's right column is empty on phones once the terminal is hidden */
+@media (max-width: 760px) {
+  .hero-right { display: none; }
+}
