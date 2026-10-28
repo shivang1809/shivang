@@ -1942,3 +1942,7 @@ svg.chip-icon[fill="none"] { stroke: currentColor; }
   color: var(--text);
   border-color: var(--text);
 }
+
+/* fifth venture row gets the stagger slot */
+.venture-list .venture:nth-child(5) { --i: 4; }
+.venture[data-accent="rose"] { --v-accent: var(--c-rose); }
