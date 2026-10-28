@@ -1919,3 +1919,26 @@ svg.chip-icon[fill="none"] { stroke: currentColor; }
   .terminal-status { padding: 0.42rem 0.85rem; font-size: 0.62rem; }
   .hero-right { gap: 0; margin-top: 0.2rem; }
 }
+
+/* ---------- SettleQuick: featured card + rose accent ---------- */
+.project[data-accent="rose"] { --card-accent: var(--c-rose); }
+
+.project--featured { grid-column: 1 / -1; }
+.project--featured .project-body { max-width: 74ch; }
+.project--featured h3 { font-size: clamp(1.5rem, 3.2vw, 1.85rem); }
+
+.project-live {
+  margin: 0 0 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+}
+.project-live a {
+  color: var(--card-accent, var(--c-rose));
+  border-bottom: 1px solid color-mix(in srgb, var(--card-accent, var(--c-rose)) 45%, transparent);
+  padding-bottom: 1px;
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+.project-live a:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
